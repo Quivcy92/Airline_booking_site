@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React, { useEffect, useRef } from "react";
 import Header from "../Header/Header";
@@ -44,7 +45,7 @@ const Layout = ({
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  }, [handleClickOutside]);
   useEffect(() => {
     dispatch(closeSubNav());
   }, [dispatch, pathname]);

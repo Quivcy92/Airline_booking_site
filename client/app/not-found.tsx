@@ -10,7 +10,7 @@ const NotFound = (props: Props) => {
         <h2 className="sm:text-8xl text-6xl">404</h2>
         <h4 className="text-2xl sm:text-5xl">Page Not Found</h4>
         <p className="text-center">
-          The page you are looking for doesn't exist or has been moved
+          The page you are looking for doesn`t exist or has been moved
         </p>
         <Link
           href="/"
