@@ -1,0 +1,61 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Airline {
+  id      String   @id @default(auto()) @map("_id") @db.ObjectId
+  name    String   @unique
+  img     String
+  flights Flight[]
+}
+
+model Flight {
+  id            String    @id @default(auto()) @map("_id") @db.ObjectId
+  airline       Airline   @relation(fields: [airlineId], references: [id])
+  airlineId     String    @db.ObjectId
+  origin        Location  @relation("OriginFlights", fields: [originId], references: [id])
+  originId      String    @db.ObjectId
+  destination   Location  @relation("DestinationFlights", fields: [destinationId], references: [id])
+  destinationId String    @db.ObjectId
+  price         Float
+  roundTrip     Boolean   @default(false)
+  departureDate DateTime
+  arrivalDate   DateTime
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  booking       Booking[] @relation("BookedFlight")
+}
+
+model Booking {
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  // flight    Flight  @relation(fields: [flightId], references: [id])
+  firstName      String
+  lastName       String
+  email          String
+  mobileNumber   String
+  url            String
+  ticketClass    String
+  paymentProcess Boolean  @default(false)
+  flightId       String   @db.ObjectId
+  flight         Flight   @relation("BookedFlight", fields: [flightId], references: [id])
+  bookedAt       DateTime @default(now())
+}
+
+model Location {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  code        String
+  flightsFrom Flight[] @relation("OriginFlights")
+  flightsTo   Flight[] @relation("DestinationFlights")
+}
