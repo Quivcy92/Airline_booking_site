@@ -4,7 +4,6 @@ import { fetchFlights } from "@/redux/features/AppSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { StackComponent } from "../../../../../Practice/angular-app/src/app/stack/stack.component";
 import { FaArrowRight, FaEdit } from "react-icons/fa";
 import { BiEdit, BiEditAlt } from "react-icons/bi";
 import { TbPointFilled } from "react-icons/tb";
