@@ -89,75 +89,75 @@ export const footerData: footerTypes[] = [
     id: "LMK26P",
     head: "About",
     links: [
-      // {
-      //   id: `RST98H`,
-      //   desc: "Bonus program",
-      //   link: "/bonus-program",
-      // },
-      // {
-      //   id: `XST98H`,
-      //   desc: "Gift cards",
-      //   link: "/gift-cards",
-      // },
-      // {
-      //   id: `ZST98H`,
-      //   desc: "Credit and payment",
-      //   link: "/credit-and-payment",
-      // },
-      // {
-      //   id: `RPT98H`,
-      //   desc: "Service contracts",
-      //   link: "/service-contracts",
-      // },
-      // {
-      //   id: `RPB88H`,
-      //   desc: "Non-cash account",
-      //   link: "/non-cash-accounts",
-      // },
-      // {
-      //   id: `RPA98H`,
-      //   desc: "Payment",
-      //   link: "/payments",
-      // },
+      {
+        id: `RST98H`,
+        desc: "Bonus program",
+        link: "/bonus-program",
+      },
+      {
+        id: `XST98H`,
+        desc: "Gift cards",
+        link: "/gift-cards",
+      },
+      {
+        id: `ZST98H`,
+        desc: "Credit and payment",
+        link: "/credit-and-payment",
+      },
+      {
+        id: `RPT98H`,
+        desc: "Service contracts",
+        link: "/service-contracts",
+      },
+      {
+        id: `RPB88H`,
+        desc: "Non-cash account",
+        link: "/non-cash-accounts",
+      },
+      {
+        id: `RPA98H`,
+        desc: "Payment",
+        link: "/payments",
+      },
     ],
   },
 
-  // {
-  //   id: "QWE72M",
-  //   head: "Company",
-  //   links: [
-  //     {
-  //       id: `RST98H`,
-  //       desc: "Find an order",
-  //       link: "/find-order",
-  //     },
-  //     {
-  //       id: `XST98H`,
-  //       desc: "Terms of delivery",
-  //       link: "/terms-of-delivery",
-  //     },
-  //     {
-  //       id: `ZST98H`,
-  //       desc: "Login",
-  //       link: "/auth",
-  //     },
-  //     {
-  //       id: `RST10H`,
-  //       desc: "Guarantee",
-  //       link: "/guarantee",
-  //     },
-  //     {
-  //       id: `XST73H`,
-  //       desc: "Frequently asked questions",
-  //       link: "/faq",
-  //     },
-  //     {
-  //       id: `SOT98H`,
-  //       desc: "Login",
-  //       link: "Terms of use of the site",
-  //     },
-  //   ],
-  // },
+  {
+    id: "QWE72M",
+    head: "Company",
+    links: [
+      {
+        id: `RST98H`,
+        desc: "Find an order",
+        link: "/find-order",
+      },
+      {
+        id: `XST98H`,
+        desc: "Terms of delivery",
+        link: "/terms-of-delivery",
+      },
+      {
+        id: `ZST98H`,
+        desc: "Login",
+        link: "/auth",
+      },
+      {
+        id: `RST10H`,
+        desc: "Guarantee",
+        link: "/guarantee",
+      },
+      {
+        id: `XST73H`,
+        desc: "Frequently asked questions",
+        link: "/faq",
+      },
+      {
+        id: `SOT98H`,
+        desc: "Login",
+        link: "Terms of use of the site",
+      },
+    ],
+  },
 ];
 
 export const navData: NavTypes[] = [
@@ -166,11 +166,11 @@ export const navData: NavTypes[] = [
     head: "Home",
     link: "/",
   },
-  // {
-  //   id: "XST98H",
-  //   head: "About us",
-  //   link: "/about",
-  // },
+  {
+    id: "XST98H",
+    head: "About us",
+    link: "/about",
+  },
   // {
   //   id: "QWE72M",
   //   head: "Destination",
@@ -181,11 +181,11 @@ export const navData: NavTypes[] = [
   //   head: "Pages",
   //   link: "/pages",
   // },
-  // {
-  //   id: "KLP59J",
-  //   head: "Contact Us",
-  //   link: "/contact",
-  // },
+  {
+    id: "KLP59J",
+    head: "Contact Us",
+    link: "/contact",
+  },
 ];
 
 export const isUser = true;
