@@ -18,7 +18,7 @@ export const FetchToLocation = async (query: any) => {
   return data;
 };
 export const FetchFlights = async (query: any) => {
-  console.log(query);
+  console.log("query",query);
   const { data } = await API.get("/flights", {
     params: {
       originId: query.originId,

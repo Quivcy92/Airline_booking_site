@@ -110,6 +110,7 @@ export class FlightsController {
         destination = await this.locationService.findOneWhere(
           query.destinationId,
         );
+        console.log('origin', origin, 'destination', destination);
         await this.flightsService.findWhere(
           origin.id,
           destination.id,
@@ -122,6 +123,13 @@ export class FlightsController {
           HttpStatus.ACCEPTED,
         );
       } else {
+        console.log(
+          'query.originId',
+          query.originId,
+          'query.destinationId',
+          query.destinationId,
+        );
+
         await this.flightsService.findWhere(
           query.originId,
           query.destinationId,
